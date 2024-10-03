@@ -4,10 +4,11 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class AccueilController {
+class AccueilController extends AbstractController {
     public function index(): Response {
-        return new Response('hello world');
+        return $this->render("pages/accueil.html.twig");
     }
 }
